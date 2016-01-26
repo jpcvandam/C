@@ -1,0 +1,25 @@
+/*programma wat met de abc-formule de nulpunten voor een tweedegraads\
+vergelijking oplost*/
+
+#include <stdio.h>
+#include <math.h>
+
+float D, x1, x2;
+
+float abc(float a, float b, float c)
+{
+	
+	D = pow(b, 2) - 4 * a * c;
+	x1 = (-b + sqrt(D)) / (4 * a * c);
+	x2 = (-b - sqrt(D)) / (4 * a * c);
+	return D, x1, x2;
+}
+
+main()
+{
+	int a, b, c;
+	printf("\n%s\n%s\n", "dit programma berekend de discriminant en de twee snijpunen van een tweedegraads polynoom", "geef daartoe de a, b en c van de functie");
+	scanf("%d%d%d", &a, &b, &c);
+	abc(a, b, c);
+	printf("\n%s%f%s%f%s%f\n", "D= ", D, " x1= ", x1, " x2= ", x2);
+}

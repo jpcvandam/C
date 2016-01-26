@@ -11,8 +11,11 @@ float abc(float a, float b, float c)
 	
 	D = pow(b, 2) - 4 * a * c;
 	x1 = (-b + sqrt(D)) / (4 * a * c);
-	x2 = (-b + sqrt(D)) / (4 * a * c);
-	return D, x1, x2;
+	x2 = (-b - sqrt(D)) / (4 * a * c);
+	if (D <= 0)
+	  return D, x1 = -0, x2 = -0;
+	else
+	  return D, x1, x2;
 }
 
 main()

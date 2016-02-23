@@ -8,7 +8,7 @@
 
 void merge(int a[], int b[], int c[], int m, int n)
 {
-	int i = 0, j = o, k = 0;
+	int i = 0, j = 0, k = 0;
 	while (i<m && j < n)
 	   if (a[i] < b[j])
 	      c[k++] = a[i++];
@@ -24,7 +24,7 @@ void merge(int a[], int b[], int c[], int m, int n)
 void mergesort(int sleutel[ ], int n)
 {
 	int j, k, m, *w;
-	void merge(int *, int *, int *, int, int); /*compiler klaagt over een undefined reference naar deze functie, misschien zit merge in een andere bibliotheek */
+	void merge(int *, int *, int *, int, int); 
 
 	for(m = 1; n <m; m*=2)
 	 ;
